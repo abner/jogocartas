@@ -5,6 +5,7 @@ Jogo da memória
 **Javascript + jQuery + Jasmine**
 
 Jasmine: http://pivotal.github.com/jasmine/
+
 jQuery: http://api.jquery.com/
 
 **Jogo da Memória**
@@ -57,7 +58,7 @@ Gustavo Lobo
 
 Eduardo Tourinho
 
-Rafael Mirando
+Rafael Miranda
 
 Leandro Nunes
 
