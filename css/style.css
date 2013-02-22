@@ -1,0 +1,28 @@
+ body {
+    background-color: #eee !important;
+}
+.conteudo {
+                background-color: #444;
+                width: 412px;
+                height: 513px;
+                padding:2px;
+            }
+
+.carta {
+    display:block;
+    float:left;
+    width: 101px;
+    height: 171px;
+}
+
+.backcover {
+    width: 101px;
+    height: 171px;
+    border: 1px dashed black;
+    float:left;
+    background-color: #ccc;
+    background-image: url(../images/paper_fibers.png); 
+    background-position: initial initial; 
+    background-repeat: initial initial;
+    display: block;
+}
