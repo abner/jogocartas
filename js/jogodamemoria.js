@@ -40,8 +40,8 @@ var tabuleiro = [];
 
 //for para ilustrar como iterar no array
 for(index in images) {
-    console.log(images[index].id);
-    console.log(images[index].filename);
+    //console.log(images[index].id);
+    //console.log(images[index].filename);
 }
 
 function obterUrlImagem(imagem) {
@@ -93,18 +93,27 @@ function montarDeck() {
 
 function virarCarta(deck, indexCarta) {
     if (indexCarta==selecionada){
-        return;
+        return {encontrado: false, cartas: []};
+    }
+    if(deck[indexCarta].acertada) {
+        return {encontrado: false, cartas: []};
     }
   deck[indexCarta].virado = true; 
     if(selecionada == -1) {
         selecionada = indexCarta;
+        return {encontrado: false, cartas : [indexCarta]};
     } else {
-        var acertada = (deck[indexCarta].index_imagem == deck[selecionada].index_imagem);
+        var acertada = (deck[indexCarta].indice_imagem == deck[selecionada].indice_imagem);
         deck[indexCarta].acertada = acertada;
         deck[selecionada].acertada = acertada;
-        
+        var retorno =  {encontrado: acertada, cartas : [selecionada, indexCarta]};
         selecionada = -1;
+        return retorno;
     }
 }
 
 deck = montarDeck().shuffle();
+
+var pausado = false;
+
+var selecionada = -1;

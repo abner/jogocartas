@@ -124,5 +124,4 @@
             expect(deck[1].acertada).toBe(true);
         });
         
-        
     });
